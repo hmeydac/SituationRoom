@@ -1,5 +1,6 @@
 ﻿namespace ProjectEntities
 {
+    using ProjectEntities.EntityExceptions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -10,7 +11,7 @@
         {
             this.TaskName = taskName;
             this.AssignedProject = assignedProject;
-            this.Workers = new List<TeamMember>();
+            this.TeamMembers = new List<TeamMember>();
             this.Subtasks = new List<Task>();
         }
 
@@ -20,23 +21,39 @@
 
         public Project AssignedProject { get; set; }
 
-        protected List<TeamMember> Workers { get; set; }
+        protected List<TeamMember> TeamMembers { get; set; }
 
         protected List<Task> Subtasks { get; set; }
 
-        public IEnumerable<TeamMember> GetAssignedWorkers()
+        public IEnumerable<TeamMember> GetAssignedMembers()
         {
-            return this.Workers;
+            return this.TeamMembers;
         }
 
-        public void Assign(TeamMember worker)
+        public void Assign(TeamMember teamMember)
         {
-            this.Workers.Add(worker);
+            if (this.GetAssignedMember(teamMember.Id) != null)
+            {
+                var message = string.Format("Team Member {0} already assigned to Task {1}.", teamMember.Id, this.Id);
+                throw new EntityAlreadyExistsException(message);
+            }
+
+            this.TeamMembers.Add(teamMember);
         }
 
-        public TeamMember GetAssignedWorker(int id)
+        public TeamMember GetAssignedMember(int id)
         {
-            return this.Workers.FirstOrDefault(worker => worker.Id == id);
+            return this.TeamMembers.FirstOrDefault(worker => worker.Id == id);
+        }
+
+        public void UnassignTeamMember(int id)
+        {
+            var teamMember = this.GetAssignedMember(id);
+            if (teamMember == null)
+            {
+                var message = string.Format("Cannot unassign Team Member {0} from Task {1}. Not found.", id, this.Id);
+                throw new EntityDoesNotExistsException(message);
+            }
         }
 
         public IEnumerable<Task> GetSubtasks()
@@ -46,6 +63,12 @@
 
         public void AddSubtask(Task subTask)
         {
+            if (this.GetTask(subTask.Id) != null)
+            {
+                var message = string.Format("Subtask {0} already exists in Task {1}.", subTask.Id, this.Id);
+                throw new EntityAlreadyExistsException(message);
+            }
+
             this.Subtasks.Add(subTask);
         }
 
@@ -54,7 +77,8 @@
             var subTask = this.GetTask(id);
             if (subTask == null)
             {
-                throw new Exception("Unable to remove. Task not found.");
+                var message = string.Format("Unable to remove subtask {0} from Task {1}. Not found.", id, this.Id);
+                throw new EntityDoesNotExistsException (message);
             }
 
             this.Subtasks.Remove(subTask);

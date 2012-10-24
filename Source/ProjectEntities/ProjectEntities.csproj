@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Asset.cs" />
     <Compile Include="Deliverable.cs" />
+    <Compile Include="EntityExceptions\EntityAlreadyExistsException.cs" />
+    <Compile Include="EntityExceptions\EntityDoesNotExistsException.cs" />
     <Compile Include="Iteration.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
