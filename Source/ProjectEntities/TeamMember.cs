@@ -2,9 +2,9 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class Worker
+    public class TeamMember
     {
-        public Worker(string firstName, string lastName)
+        public TeamMember(string firstName, string lastName)
         {
             this.FirstName = firstName;
             this.LastName = lastName;

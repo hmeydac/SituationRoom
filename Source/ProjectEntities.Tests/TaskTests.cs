@@ -1,8 +1,8 @@
 ﻿namespace ProjectEntities.Tests
 {
+    using System.Linq;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using ProjectEntities.Tests.ObjectMother;
-    using System.Linq;
 
     [TestClass]
     public class TaskTests
@@ -31,7 +31,7 @@
         {
             // Arrange
             var task = new TaskMother().Build();
-            var worker = new WorkerMother().Build();
+            var worker = new TeamMemberMother().Build();
             var originalCount = task.GetAssignedWorkers().Count();
             var expectedCount = 1;
 

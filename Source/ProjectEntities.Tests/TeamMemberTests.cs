@@ -3,19 +3,19 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class WorkerTests
+    public class TeamMemberTests
     {
         [TestMethod]
-        public void WorkerConstructorTest()
+        public void TeamMemberConstructorTest()
         {
             // Arrange
             var expectedLastName = "LastName Test";
             var expectedFirstName = "FirstName Test";
 
             // Act
-            var worker = new Worker(expectedFirstName, expectedLastName);
-            var actualLastName = worker.LastName;
-            var actualFirstName = worker.FirstName;
+            var teamMember = new TeamMember(expectedFirstName, expectedLastName);
+            var actualLastName = teamMember.LastName;
+            var actualFirstName = teamMember.FirstName;
 
             // Assert
             Assert.AreEqual(expectedLastName, actualLastName);
@@ -28,13 +28,13 @@
             // Arrange
             var expectedLastName = "LastName Test";
             var originalExpected = "FirstName Test";
-            var worker = new Worker(originalExpected, expectedLastName );
+            var teamMember = new TeamMember(originalExpected, expectedLastName);
             var newExpected = "New FirstName";
 
             // Act
-            var originalActual = worker.FirstName;
-            worker.FirstName = newExpected;
-            var newActual = worker.FirstName;
+            var originalActual = teamMember.FirstName;
+            teamMember.FirstName = newExpected;
+            var newActual = teamMember.FirstName;
 
             // Assert
             Assert.AreEqual(originalExpected, originalActual);
@@ -47,13 +47,13 @@
             // Arrange
             var originalExpected = "LastName Test";
             var expectedFirstName = "FirstName Test";
-            var worker = new Worker(expectedFirstName, originalExpected);
+            var teamMember = new TeamMember(expectedFirstName, originalExpected);
             var newExpected = "New LastName";
 
             // Act
-            var originalActual = worker.LastName;
-            worker.LastName = newExpected;
-            var newActual = worker.LastName;
+            var originalActual = teamMember.LastName;
+            teamMember.LastName = newExpected;
+            var newActual = teamMember.LastName;
 
             // Assert
             Assert.AreEqual(originalExpected, originalActual);
@@ -61,18 +61,18 @@
         }
 
         [TestMethod]
-        public void WorkerIdTest()
+        public void TeamMemberIdTest()
         {
             // Arrange
-            var workerFirstName = "Test";
-            var workerLastName = "Worker";
-            var worker = new Worker(workerFirstName, workerLastName);
+            var teamMemberFirstName = "Test";
+            var teamMemberLastName = "TeamMember";
+            var teamMember = new TeamMember(teamMemberFirstName, teamMemberLastName);
             var newExpected = 1;
 
             // Act
-            var originalActual = worker.Id;
-            worker.Id = newExpected;
-            var newActual = worker.Id;
+            var originalActual = teamMember.Id;
+            teamMember.Id = newExpected;
+            var newActual = teamMember.Id;
 
             // Assert
             Assert.AreEqual(0, originalActual);

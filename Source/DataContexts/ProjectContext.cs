@@ -1,13 +1,11 @@
 ﻿namespace DataContexts
 {
-    using ProjectEntities;
     using System.Data.Entity;
+    using ProjectEntities;
 
     public class ProjectContext : DbContext
-    {
-        public DbSet<Team> Teams { get; set; }
-
-        public DbSet<Worker> Workers { get; set; }
+    {        
+        public DbSet<TeamMember> TeamMembers { get; set; }
 
         public DbSet<Asset> Assets { get; set; }
 

@@ -10,7 +10,7 @@
         {
             this.TaskName = taskName;
             this.AssignedProject = assignedProject;
-            this.Workers = new List<Worker>();
+            this.Workers = new List<TeamMember>();
             this.Subtasks = new List<Task>();
         }
 
@@ -20,21 +20,21 @@
 
         public Project AssignedProject { get; set; }
 
-        protected List<Worker> Workers { get; set; }
+        protected List<TeamMember> Workers { get; set; }
 
         protected List<Task> Subtasks { get; set; }
 
-        public IEnumerable<Worker> GetAssignedWorkers()
+        public IEnumerable<TeamMember> GetAssignedWorkers()
         {
             return this.Workers;
         }
 
-        public void Assign(Worker worker)
+        public void Assign(TeamMember worker)
         {
             this.Workers.Add(worker);
         }
 
-        public Worker GetAssignedWorker(int id)
+        public TeamMember GetAssignedWorker(int id)
         {
             return this.Workers.FirstOrDefault(worker => worker.Id == id);
         }

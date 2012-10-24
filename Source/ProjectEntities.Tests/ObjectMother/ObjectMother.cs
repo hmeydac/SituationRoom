@@ -1,6 +1,7 @@
-﻿using System;
-namespace ProjectEntities.Tests.ObjectMother
+﻿namespace ProjectEntities.Tests.ObjectMother
 {
+    using System;
+
     public abstract class ObjectMother<T>
     {        
         protected T Instance { get; set; }

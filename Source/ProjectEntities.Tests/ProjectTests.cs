@@ -1,9 +1,9 @@
 ﻿namespace ProjectEntities.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;    
-    using ProjectEntities.Tests.ObjectMother;
     using System.Linq;
-
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using ProjectEntities.Tests.ObjectMother;
+    
     [TestClass]
     public class ProjectTests
     {
@@ -20,7 +20,6 @@
             // Assert
             Assert.AreEqual(expectedName, actual);
             Assert.IsNotNull(project.GetAssets());
-            Assert.IsNotNull(project.GetTeams());
         }
 
         [TestMethod]
@@ -42,41 +41,6 @@
         }
 
         [TestMethod]
-        public void ProjectTeamAssignedTest()
-        {
-            // Arrange
-            var project = new ProjectMother().Build();
-            var team = new TeamMother().Build();
-
-            // Act
-            project.AddTeam(team);
-            var actual = project.GetTeam(team.Id);
-
-            // Assert
-            Assert.AreEqual(team.Id, actual.Id);
-            Assert.AreEqual(team.Name, actual.Name);
-        }
-
-        [TestMethod]
-        public void RemoveTeamFromProjectTest()
-        {            
-            // Arrange
-            var project = new ProjectMother().Build();
-            var team = new TeamMother().Build();
-            project.AddTeam(team);
-            var originalCount = project.GetTeams().Count();
-            var expected = 0;
-
-            // Act            
-            project.RemoveTeam(team.Id);
-            var actual = project.GetTeams().Count();
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-            Assert.AreNotEqual(originalCount, actual);
-        }
-
-        [TestMethod]
         public void AddAssetToProjectTest()
         {
             // Arrange
@@ -90,12 +54,12 @@
             project.AddAsset(asset);
             var actualAsset = project.GetAsset(asset.Id);
             var actualId = actualAsset.Id;
-            var actualCount = project.GetAssets().Count();            
+            var actualCount = project.GetAssets().Count();
 
             // Assert
             Assert.AreEqual(expectedId, actualId);
             Assert.AreEqual(expectedCount, actualCount);
-            Assert.AreNotEqual(originalCount, actualCount);            
+            Assert.AreNotEqual(originalCount, actualCount);
         }
 
         [TestMethod]
@@ -115,6 +79,26 @@
             // Assert
             Assert.AreEqual(expected, actual);
             Assert.AreNotEqual(originalCount, actual);
+        }
+
+        [TestMethod]
+        public void AddIterationToProjectTest()
+        {
+            // Arrange
+            var project = new ProjectMother().Build();
+            var iteration = new IterationMother().Build();
+            var originalCount = project.GetIterations().Count();
+            var expectedCount = 1;
+            
+            // Act
+            project.AddIteration(iteration);
+            var actual = project.GetIteration(iteration.Id);
+            var actualCount = project.GetIterations().Count();
+
+            // Assert
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(expectedCount, actualCount);
+            Assert.AreNotEqual(originalCount, actualCount);            
         }
     }
 }

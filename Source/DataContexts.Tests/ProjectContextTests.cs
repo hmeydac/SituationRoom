@@ -1,8 +1,8 @@
 ﻿namespace DataContexts.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System.Data.Entity;
     using System.Linq;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class ProjectContextTests
@@ -14,12 +14,11 @@
             
             // Arrange
             using (var context = new ProjectContext())
-            {
-                context.Teams.Count();
+            {              
                 context.Assets.Count();
                 context.Projects.Count();
                 context.Tasks.Count();
-                context.Workers.Count();
+                context.TeamMembers.Count();
             }
         }
     }

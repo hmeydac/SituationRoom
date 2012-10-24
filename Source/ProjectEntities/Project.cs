@@ -8,9 +8,9 @@
     public class Project
     {
         public Project(string projectName)
-        {
-            this.Teams = new List<Team>();
+        {        
             this.Assets = new List<Asset>();
+            this.Iterations = new List<Iteration>();
             this.Name = projectName;
         }
 
@@ -18,36 +18,10 @@
         public int Id { get; set; }
 
         public string Name { get; set; }
-
-        protected List<Team> Teams { get; set; }
-
+           
         protected List<Asset> Assets { get; set; }
 
-        public void AddTeam(Team team)
-        {
-            this.Teams.Add(team);
-        }
-
-        public Team GetTeam(int id)
-        {
-            return this.Teams.FirstOrDefault(team => team.Id == id);
-        }
-
-        public IEnumerable<Team> GetTeams()
-        {
-            return this.Teams;
-        }
-
-        public void RemoveTeam(int id)
-        {
-            var team = this.GetTeam(id);
-            if (team == null)
-            {
-                throw new Exception("Unable to remove. Team not found.");
-            }
-
-            this.Teams.Remove(team);
-        }
+        protected List<Iteration> Iterations { get; set; }
 
         public IEnumerable<Asset> GetAssets()
         {
@@ -73,6 +47,21 @@
             }
 
             this.Assets.Remove(asset);
+        }
+
+        public void AddIteration(Iteration iteration)
+        {
+            this.Iterations.Add(iteration);
+        }
+
+        public IEnumerable<Iteration> GetIterations()
+        {
+            return this.Iterations;
+        }
+
+        public Iteration GetIteration(int id)
+        {
+            return this.Iterations.FirstOrDefault(iteration => iteration.Id == id);
         }
     }
 }
