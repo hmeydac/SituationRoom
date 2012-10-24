@@ -18,7 +18,7 @@
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("ProjectId")]
+        [ForeignKey("Id")]
         public Project Project { get; set; }
 
         public string Name { get; set; }

@@ -19,6 +19,8 @@
                 context.Projects.Count();
                 context.Tasks.Count();
                 context.TeamMembers.Count();
+                context.Iterations.Count();
+                context.Deliverables.Count();
             }
         }
     }

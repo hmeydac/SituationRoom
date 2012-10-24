@@ -16,7 +16,7 @@
 
         public string Name { get; set; }
 
-        [ForeignKey("IterationId")]
+        [ForeignKey("Id")]
         public Iteration Iteration { get; set; }
     }
 }
