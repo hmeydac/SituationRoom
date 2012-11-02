@@ -14,16 +14,19 @@
         {
             // Arrange
             var project = new ProjectMother().Build();
+            var taskType = new TaskTypeMother().Build();
             var expectedTaskName = "Task Test";
 
             // Act
-            var task = new Task(expectedTaskName, project);
+            var task = new Task(expectedTaskName, taskType, project);
             var actual = task.TaskName;
             var actualProject = task.AssignedProject;
+            var actualTaskType = task.TaskType;
 
             // Assert
             Assert.AreEqual(expectedTaskName, actual);
             Assert.AreEqual(project, actualProject);
+            Assert.AreEqual(taskType, actualTaskType);
             Assert.IsNotNull(task.GetAssignedMembers());
             Assert.IsNotNull(task.GetSubtasks());
         }
@@ -107,6 +110,8 @@
             catch (Exception)
             {
                 var actual = task.GetSubtasks().Count();
+                
+                // Assert
                 Assert.AreEqual(expected, actual);
                 throw;
             }
@@ -133,7 +138,7 @@
 
         [TestMethod]
         [ExpectedException(typeof(EntityDoesNotExistsException))]
-        public void RemoveInexistantSubtaskShouldFail()
+        public void RemoveInexistentSubtaskShouldFail()
         {
             // Arrange
             var task = new TaskMother().Build();

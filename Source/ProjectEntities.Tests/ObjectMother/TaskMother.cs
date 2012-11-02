@@ -9,7 +9,8 @@
         public TaskMother()
         {
             var project = new ProjectMother().Build();
-            this.Instance = new Task(DefaultName, project);
+            var taskType = new TaskTypeMother().Build();
+            this.Instance = new Task(DefaultName, taskType, project);
             this.Instance.Id = new Random(100).Next();
         }
     }

@@ -48,7 +48,10 @@
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task.cs" />
+    <Compile Include="TaskType.cs" />
     <Compile Include="TeamMember.cs" />
+    <Compile Include="Timeline.cs" />
+    <Compile Include="TimelineActivity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

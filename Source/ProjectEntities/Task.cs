@@ -3,13 +3,15 @@
     using ProjectEntities.EntityExceptions;
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
     public class Task
     {
-        public Task(string taskName, Project assignedProject)
+        public Task(string taskName, TaskType taskType, Project assignedProject)
         {
             this.TaskName = taskName;
+            this.TaskType = taskType;
             this.AssignedProject = assignedProject;
             this.TeamMembers = new List<TeamMember>();
             this.Subtasks = new List<Task>();
@@ -18,6 +20,9 @@
         public int Id { get; set; }
 
         public string TaskName { get; set; }
+
+        [ForeignKey("Id")]
+        public TaskType TaskType { get; set; }
 
         public Project AssignedProject { get; set; }
 

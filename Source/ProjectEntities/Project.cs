@@ -30,6 +30,7 @@
 
         public void AddAsset(Asset asset)
         {
+            asset.Project = this;
             this.Assets.Add(asset);
         }
 

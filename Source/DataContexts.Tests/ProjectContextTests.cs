@@ -21,6 +21,9 @@
                 context.TeamMembers.Count();
                 context.Iterations.Count();
                 context.Deliverables.Count();
+                context.TaskTypes.Count();
+                context.TimelineActivities.Count();
+                context.Timelines.Count();
             }
         }
     }

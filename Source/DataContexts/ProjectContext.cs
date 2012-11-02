@@ -13,8 +13,14 @@
 
         public DbSet<Task> Tasks { get; set; }
 
+        public DbSet<TaskType> TaskTypes { get; set; }
+
         public DbSet<Deliverable> Deliverables { get; set; }
 
         public DbSet<Iteration> Iterations { get; set; }
+
+        public DbSet<Timeline> Timelines { get; set; }
+
+        public DbSet<TimelineActivity> TimelineActivities { get; set; }
     }
 }

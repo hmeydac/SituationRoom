@@ -1,6 +1,6 @@
 ﻿namespace ProjectEntities
 {
-    using ProjectEntities.EntityExceptions;
+    using EntityExceptions;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;

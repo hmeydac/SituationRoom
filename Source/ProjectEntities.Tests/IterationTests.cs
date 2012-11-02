@@ -3,8 +3,8 @@
     using System;
     using System.Linq;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using ProjectEntities.Tests.ObjectMother;
-    using ProjectEntities.EntityExceptions;
+    using ObjectMother;
+    using EntityExceptions;
 
     [TestClass]
     public class IterationTests
@@ -94,7 +94,7 @@
 
         [TestMethod]
         [ExpectedException(typeof(EntityDoesNotExistsException))]
-        public void RemoveInexistantDeliverableShouldFail()
+        public void RemoveInexistentDeliverableShouldFail()
         {
             // Arrange
             var iteration = new IterationMother().Build();
@@ -172,7 +172,7 @@
 
         [TestMethod]
         [ExpectedException(typeof(EntityDoesNotExistsException))]
-        public void UnassignInexistantTeamMemberShouldFail()
+        public void UnassignInexistentTeamMemberShouldFail()
         {
             // Arrange
             var iteration = new IterationMother().Build();

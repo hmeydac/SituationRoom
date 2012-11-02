@@ -50,11 +50,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ObjectMother\TimelineActivityMother.cs" />
     <Compile Include="ObjectMother\AssetMother.cs" />
     <Compile Include="ObjectMother\DeliverableMother.cs" />
     <Compile Include="ObjectMother\IterationMother.cs" />
     <Compile Include="ObjectMother\ObjectMother.cs" />
     <Compile Include="ObjectMother\ProjectMother.cs" />
+    <Compile Include="ObjectMother\TaskTypeMother.cs" />
     <Compile Include="ObjectMother\TeamMemberMother.cs" />
     <Compile Include="ObjectMother\TaskMother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +65,9 @@
     <Compile Include="TeamMemberTests.cs" />
     <Compile Include="TaskTests.cs" />
     <Compile Include="IterationTests.cs" />
+    <Compile Include="TaskTypeTests.cs" />
+    <Compile Include="ObjectMother\TimelineMother.cs" />
+    <Compile Include="TimelineTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProjectEntities\ProjectEntities.csproj">
