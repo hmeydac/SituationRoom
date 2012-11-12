@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div>
+    <h1>All Tasks</h1>
+    <ul id="tasks"></ul>
+    <label for="taskId">ID:</label>
+    <input type="text" id="taskId" size="5" />
+    <input type="button" value="Search" onclick="find();" />
+    <p id="task"></p>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Send an AJAX request
+        $.getJSON("api/tasks/",
+        function (data) {
+            // On success, 'data' contains a list of products.
+            $.each(data, function (key, val) {
+
+                // Format the text to display.
+                var str = val.Title;
+
+                // Add a list item for the product.
+                $('<li/>', { text: str }).appendTo($('#tasks'));
+            });
+        });
+    });
+
+    function find() {
+        var id = $('#taskId').val();
+        $.getJSON("api/tasks/" + id,
+            function (data) {
+                var str = data.Title;
+                $('#task').text(str);
+            })
+        .fail(
+            function (jqXHR, textStatus, err) {
+                $('#task').text('Error: ' + err);
+            });
+    }
+</script>

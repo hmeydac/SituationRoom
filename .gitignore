@@ -1,11 +1,53 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
-
-# mstest test results
-TestResults
-
-StyleCop*.*
-bin
-obj
+# git-ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+*.o
+*.sdf
+*.lo
+*.la
+*.al
+.libs
+*.so
+*.a
+*.pyc
+*.pyo
+*.rej
 *.suo
+*.user
+*.cache
+*.xap
+*.log
+*.vspcc
+*.vspscc
+*.vscc
+*.vssscc
+*~
+*.*~
+.*.swp
+.DS_Store
+bin
+Bin
+obj
+Obj
+Debug
+Release
+*.suo
+*.user
+TestResults
+*.Cache
+_ReSharper.*
+ClientBin
+stylecop.*
+pkgobj
+pkg
+.svn
+.builds
+~$*
+*.dbmdl
+coverage
+packages
+*.docstates
+*.InstallLog

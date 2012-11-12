@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lampadas.Web", "Lampadas.Web\Lampadas.Web.csproj", "{2B78F741-098F-4226-9340-71DCFE14B398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lampadas.Web.Tests", "Lampadas.Web.Tests\Lampadas.Web.Tests.csproj", "{4F79F62A-D2C3-4DAC-8969-D48571A218EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lampadas.Model", "Lampadas.Model\Lampadas.Model.csproj", "{6A60ECF3-E493-4C13-8799-B58CA90F3952}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B78F741-098F-4226-9340-71DCFE14B398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B78F741-098F-4226-9340-71DCFE14B398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B78F741-098F-4226-9340-71DCFE14B398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B78F741-098F-4226-9340-71DCFE14B398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F79F62A-D2C3-4DAC-8969-D48571A218EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F79F62A-D2C3-4DAC-8969-D48571A218EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F79F62A-D2C3-4DAC-8969-D48571A218EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F79F62A-D2C3-4DAC-8969-D48571A218EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A60ECF3-E493-4C13-8799-B58CA90F3952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A60ECF3-E493-4C13-8799-B58CA90F3952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A60ECF3-E493-4C13-8799-B58CA90F3952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A60ECF3-E493-4C13-8799-B58CA90F3952}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
