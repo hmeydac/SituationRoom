@@ -4,4 +4,4 @@ Lampadas.TaskView.create({
     controller: Lampadas.TaskController.create({
         content: model
     })
-}).appendTo('body');
+}).appendTo('#taks-list');
