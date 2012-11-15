@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Web.Http;
-using Lampadas.Web.Models;
-
-namespace Lampadas.Web.Controllers
+﻿namespace Lampadas.Web.Controllers
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net;
+    using System.Web.Http;
+    using Lampadas.Web.Models;
+
     public class TasksController : ApiController
     {
         private TaskHeader[] tasksHeaders = new TaskHeader[]

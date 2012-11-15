@@ -9,8 +9,8 @@ namespace Lampadas.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/ember").Include(
-                "~/Scripts/Libs/ember-1.0.0-pre.2.min.js",
-                "~/Scripts/Libs/handlebars.js"
+                "~/Scripts/Libs/handlebars.js",
+                "~/Scripts/Libs/ember.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -43,6 +43,17 @@ namespace Lampadas.Web
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            RegisterEmber(bundles);
+        }
+
+        private static void RegisterEmber(BundleCollection bundles)
+        {
+            bundles.Add(new ScriptBundle("~/bundles/models").Include("~/Scripts/Models/*.model.js"));
+            bundles.Add(new ScriptBundle("~/bundles/collections").Include("~/Scripts/Collections/*.collection.js"));
+            bundles.Add(new ScriptBundle("~/bundles/controllers").Include("~/Scripts/Controllers/*.controller.js"));
+            bundles.Add(new ScriptBundle("~/bundles/views").Include("~/Scripts/Views/*.view.js"));
+            bundles.Add(new ScriptBundle("~/bundles/application").Include("~/Scripts/application.js"));
         }
     }
 }
