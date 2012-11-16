@@ -42,6 +42,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -284,6 +287,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lampadas.Model\Lampadas.Model.csproj">
+      <Project>{6A60ECF3-E493-4C13-8799-B58CA90F3952}</Project>
+      <Name>Lampadas.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lampadas.Services.Interfaces\Lampadas.Services.Interfaces.csproj">
+      <Project>{D69616CA-FF20-4C3E-9362-320B07E56CD4}</Project>
+      <Name>Lampadas.Services.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lampadas.Services\Lampadas.Services.csproj">
+      <Project>{9332E9DC-5298-4AA4-A2E7-CCCC5FF64C34}</Project>
+      <Name>Lampadas.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

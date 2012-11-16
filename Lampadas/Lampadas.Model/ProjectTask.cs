@@ -2,7 +2,7 @@
 
 namespace Lampadas.Model
 {
-    public class Task
+    public class ProjectTask
     {
         [Key]
         public int Id { get; set; }

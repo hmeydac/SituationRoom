@@ -6,6 +6,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using AutoMapper;
+using Lampadas.Model;
+using Lampadas.Web.Models;
 
 namespace Lampadas.Web
 {
@@ -23,6 +26,9 @@ namespace Lampadas.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            // TODO: Move to another class
+            Mapper.CreateMap<ProjectTask, TaskHeader>();
         }
     }
 }
