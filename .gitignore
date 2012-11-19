@@ -51,3 +51,5 @@ coverage
 packages
 *.docstates
 *.InstallLog
+*.mdf
+*.ldf
