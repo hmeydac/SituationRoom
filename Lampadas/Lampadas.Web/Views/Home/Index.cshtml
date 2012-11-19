@@ -3,11 +3,13 @@
 }
 <div>
     <h1>All Tasks</h1>
-    <div id="taks-list"></div>
 </div>
 
-<script type="text/x-handlebars" data-template-name="task-list-template">
+<div id="navigationPanel">
+    <div id="task-list"></div>
+    <script type="text/x-handlebars" data-template-name="task-list-template">
     {{#each content}}
         <a href="#" {{action "showDescription" on="click"}}>{{this.Title}}</a>
     {{/each}}
-</script>
+    </script>
+</div>

@@ -1,8 +1,7 @@
-﻿using System.Web;
-using System.Web.Optimization;
-
-namespace Lampadas.Web
+﻿namespace Lampadas.Web
 {
+    using System.Web.Optimization;
+
     public class BundleConfig
     {
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
@@ -10,8 +9,7 @@ namespace Lampadas.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/ember").Include(
                 "~/Scripts/Libs/handlebars.js",
-                "~/Scripts/Libs/ember.js"
-                ));
+                "~/Scripts/Libs/ember.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/Libs/jquery-{version}.js"));

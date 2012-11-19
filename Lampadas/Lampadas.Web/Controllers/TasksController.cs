@@ -1,13 +1,12 @@
-﻿using System.Linq;
-using AutoMapper;
-using Lampadas.Model;
-using Lampadas.Services;
-
-namespace Lampadas.Web.Controllers
+﻿namespace Lampadas.Web.Controllers
 {
     using System.Collections.Generic;
+    using System.Linq;
     using System.Web.Http;
-    using Models;
+    using AutoMapper;
+    using Lampadas.Model;
+    using Lampadas.Services;
+    using Lampadas.Web.Models;
 
     public class TasksController : ApiController
     {
