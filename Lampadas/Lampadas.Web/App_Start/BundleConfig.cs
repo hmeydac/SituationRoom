@@ -47,6 +47,7 @@
 
         private static void RegisterEmber(BundleCollection bundles)
         {
+            bundles.Add(new ScriptBundle("~/bundles/proxy").Include("~/Scripts/apiproxy.js"));
             bundles.Add(new ScriptBundle("~/bundles/models").Include("~/Scripts/Models/*.model.js"));
             bundles.Add(new ScriptBundle("~/bundles/collections").Include("~/Scripts/Collections/*.collection.js"));
             bundles.Add(new ScriptBundle("~/bundles/controllers").Include("~/Scripts/Controllers/*.controller.js"));

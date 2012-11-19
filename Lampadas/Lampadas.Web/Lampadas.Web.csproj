@@ -233,6 +233,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\Libs\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\apiproxy.js" />
     <Content Include="Scripts\application.js" />
     <Content Include="Scripts\Collections\task.collection.js" />
     <Content Include="Scripts\Controllers\task.controller.js" />
