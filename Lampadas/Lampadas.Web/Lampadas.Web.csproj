@@ -176,6 +176,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -233,7 +239,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\Libs\jquery-1.7.1.intellisense.js" />
-    <Content Include="Scripts\apiproxy.js" />
+    <Content Include="Scripts\Libs\bootstrap.js" />
+    <Content Include="Scripts\Libs\bootstrap.min.js" />
+    <Content Include="Scripts\Services\taskservice.js" />
     <Content Include="Scripts\application.js" />
     <Content Include="Scripts\Collections\task.collection.js" />
     <Content Include="Scripts\Controllers\task.controller.js" />

@@ -11,6 +11,8 @@
                 "~/Scripts/Libs/handlebars.js",
                 "~/Scripts/Libs/ember.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/Libs/bootstrap.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/Libs/jquery-{version}.js"));
 
@@ -26,7 +28,10 @@
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/Libs/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/site.css",
+                "~/Content/bootstrap.css",
+                "~/Content/bootstrap-responsive.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -47,7 +52,7 @@
 
         private static void RegisterEmber(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/proxy").Include("~/Scripts/apiproxy.js"));
+            bundles.Add(new ScriptBundle("~/bundles/proxy").Include("~/Scripts/Services/taskservice.js"));
             bundles.Add(new ScriptBundle("~/bundles/models").Include("~/Scripts/Models/*.model.js"));
             bundles.Add(new ScriptBundle("~/bundles/collections").Include("~/Scripts/Collections/*.collection.js"));
             bundles.Add(new ScriptBundle("~/bundles/controllers").Include("~/Scripts/Controllers/*.controller.js"));

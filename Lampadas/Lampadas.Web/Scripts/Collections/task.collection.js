@@ -1,7 +1,6 @@
 ﻿Lampadas.TaskCollection = Ember.ArrayProxy.extend({
     content: [],
     init: function () {
-        Lampadas.Proxy.getTasks($.proxy(this.getTasksCallback, this));
     },
     getTasksCallback: function (data) {
         var that = this, task;
