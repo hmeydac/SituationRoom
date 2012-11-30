@@ -54,10 +54,9 @@
         {
             bundles.Add(new ScriptBundle("~/bundles/proxy").Include("~/Scripts/Services/taskservice.js"));
             bundles.Add(new ScriptBundle("~/bundles/models").Include("~/Scripts/Models/*.model.js"));
-            bundles.Add(new ScriptBundle("~/bundles/collections").Include("~/Scripts/Collections/*.collection.js"));
             bundles.Add(new ScriptBundle("~/bundles/controllers").Include("~/Scripts/Controllers/*.controller.js"));
             bundles.Add(new ScriptBundle("~/bundles/views").Include("~/Scripts/Views/*.view.js"));
-            bundles.Add(new ScriptBundle("~/bundles/application").Include("~/Scripts/application.js"));
+            bundles.Add(new ScriptBundle("~/bundles/application").Include("~/Scripts/application/application.js"));
         }
     }
 }

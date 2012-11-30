@@ -1,22 +1,11 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<h1>Tasks</h1>
-<div class="container-fluid">
-    <div class="span4">
-        <div id="task-list"></div>
-        
-    </div>
-    <div class="span8"></div>
-</div>
-
-<div id="navigationPanel">
-    
-    <script type="text/x-handlebars" data-template-name="task-list-template">
-        <ul class="nav nav-pills nav-stacked">
-    {{#each content}}
-        <li><a href="#" {{action "showDescription" on="click"}}>{{this.Title}}</a></li>
-    {{/each}}
-    </ul>
-    </script>
-</div>
+<script type="text/x-handlebars" data-template-name="application">
+    <h1>Situation Room</h1>        
+    {{outlet}}
+</script>
+<script type="text/x-handlebars" data-template-name="tasks">
+    <h3>Tasks List</h3>
+    <p>Welcome to the Task List</p>
+</script>
