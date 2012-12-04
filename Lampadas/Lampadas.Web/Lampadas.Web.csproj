@@ -239,6 +239,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\Libs\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\application\routes.js" />
+    <Content Include="Scripts\Controllers\application.controller.js" />
+    <Content Include="Scripts\Controllers\tasks.controller.js" />
     <Content Include="Scripts\Libs\bootstrap.js" />
     <Content Include="Scripts\Libs\bootstrap.min.js" />
     <Content Include="Scripts\application\application.js" />
@@ -258,6 +261,9 @@
     <Content Include="Scripts\Libs\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\Libs\knockout-2.1.0.js" />
     <Content Include="Scripts\Libs\modernizr-2.5.3.js" />
+    <Content Include="Scripts\Models\task.model.js" />
+    <Content Include="Scripts\Views\application.view.js" />
+    <Content Include="Scripts\Views\tasks.view.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -288,10 +294,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\Controllers\" />
-    <Folder Include="Scripts\Models\" />
     <Folder Include="Scripts\Services\" />
-    <Folder Include="Scripts\Views\" />
+    <Folder Include="Scripts\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

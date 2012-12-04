@@ -5,7 +5,13 @@
     <h1>Situation Room</h1>        
     {{outlet}}
 </script>
+<!-- Tasks List -->
 <script type="text/x-handlebars" data-template-name="tasks">
-    <h3>Tasks List</h3>
-    <p>Welcome to the Task List</p>
+    <h3>Task List</h3>
+    <ul>
+    {{#each window.App.TasksController}}
+        <li>hola dami</li>
+        <li>{{title}}</li>
+    {{/each}}
+    </ul>
 </script>
