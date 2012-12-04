@@ -9,9 +9,11 @@
 <script type="text/x-handlebars" data-template-name="tasks">
     <h3>Task List</h3>
     <ul>
-    {{#each window.App.TasksController}}
-        <li>hola dami</li>
-        <li>{{title}}</li>
+    {{#each task in controller}}
+        {{#with task}}
+            <li>hola dami</li>
+            <li>{{Title}}</li>
+        {{/with}}
     {{/each}}
     </ul>
 </script>

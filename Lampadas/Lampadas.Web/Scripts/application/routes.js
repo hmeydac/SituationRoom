@@ -13,6 +13,7 @@ DefaultRoute = Ember.Router.extend({
             enter: function (router) {
                 console.log("The tasks sub-state was entered.");
             },
+            
             connectOutlets: function (router, context) {
                 router.get('applicationController').connectOutlet('tasks');
             }

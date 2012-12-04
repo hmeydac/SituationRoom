@@ -2,17 +2,19 @@
 /// <reference path="../Models/task.model.js" />
 TasksController = Ember.ArrayController.extend(
     {
-        content: [],
+        content: null,
         
         init: function() {
             jQuery.getJSON('/api/tasks', jQuery.proxy(this.fillValues, this));
         },
         
         fillValues: function (data) {
+            var tasks = [];
             console.log('Tasks retrieved');
             for (var i = 0; i < data.length; i++) {
-                task = Task.create().setProperties(data[i]);
-                this.content.push(task);
+                tasks.push(Task.create().setProperties(data[i]));
             };
+
+            this.set('content', tasks);
         }
     });
