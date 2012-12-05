@@ -10,10 +10,15 @@ window.App = Ember.Application.create({
     
     ApplicationController: ApplicationController,
     
-    // *** Tasks
-    TasksView: TasksView,
+    // *** Iteration
+    IterationView: IterationView,
     
-    TasksController: TasksController
+    IterationController: IterationController,
+    
+    // *** Task
+    TaskView: TaskView,
+    
+    TaskController: TaskController
 });
 
 App.initialize();

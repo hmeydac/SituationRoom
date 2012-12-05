@@ -182,9 +182,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\Libs\jquery-1.7.1.intellisense.js" />
-    <Content Include="Scripts\application\routes.js" />
+    <Content Include="Scripts\application\iteration.routes.js" />
+    <Content Include="Scripts\application\application.routes.js" />
+    <Content Include="Scripts\application\task.routes.js" />
     <Content Include="Scripts\Controllers\application.controller.js" />
-    <Content Include="Scripts\Controllers\tasks.controller.js" />
+    <Content Include="Scripts\Controllers\iteration.controller.js" />
+    <Content Include="Scripts\Controllers\task.controller.js" />
     <Content Include="Scripts\Libs\bootstrap.js" />
     <Content Include="Scripts\Libs\bootstrap.min.js" />
     <Content Include="Scripts\application\application.js" />
@@ -206,7 +209,8 @@
     <Content Include="Scripts\Libs\modernizr-2.5.3.js" />
     <Content Include="Scripts\Models\task.model.js" />
     <Content Include="Scripts\Views\application.view.js" />
-    <Content Include="Scripts\Views\tasks.view.js" />
+    <Content Include="Scripts\Views\iteration.view.js" />
+    <Content Include="Scripts\Views\task.view.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

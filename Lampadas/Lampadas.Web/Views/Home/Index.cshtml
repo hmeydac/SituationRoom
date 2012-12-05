@@ -6,8 +6,8 @@
         {{outlet}}
     </div>
 </script>
-<!-- Tasks List -->
-<script type="text/x-handlebars" data-template-name="tasks">
+<!-- Iteration -->
+<script type="text/x-handlebars" data-template-name="iteration">
     <h1>ITERATION #7</h1>
     <ul class="inline-list">
         <li>
@@ -36,8 +36,13 @@
     <ul class="item-list">
     {{#each task in controller}}
         {{#with task}}            
-            <li><a href="#">{{Title}}</a></li>
+            <li><a {{action showTask this href=true}}>{{Title}}</a></li>
         {{/with}}
     {{/each}}
     </ul>
 </script>
+<!-- Task -->
+<script type="text/x-handlebars" data-template-name="task">
+    <h1>{{Title}}</h1>
+    
+</script>    

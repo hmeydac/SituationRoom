@@ -1,6 +1,6 @@
 ﻿/// <reference path="../Libs/_references.js" />
 /// <reference path="../Models/task.model.js" />
-TasksController = Ember.ArrayController.extend(
+IterationController = Ember.ArrayController.extend(
     {
         content: null,
         
