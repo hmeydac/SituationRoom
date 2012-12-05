@@ -10,15 +10,7 @@
     @RenderSection("scripts", required: false)
 </head>
 <body>
-    <header>
-    </header>
-    <div id="body">
-        <section>
-            @RenderBody()
-        </section>
-    </div>
-    <footer>
-    </footer>
+    @RenderBody()
 </body>
 
 @Scripts.Render("~/bundles/jquery")
