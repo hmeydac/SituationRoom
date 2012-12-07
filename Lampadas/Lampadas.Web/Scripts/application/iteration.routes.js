@@ -1,6 +1,6 @@
 ﻿/// <reference path="../Libs/_references.js" />
 IterationRoute = Ember.Route.extend({
-    route: '/iteration',
+    route: '/iterations/:Id',
 
     showTask: Ember.Route.transitionTo('iteration.task'),
 

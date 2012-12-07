@@ -1,25 +1,19 @@
 ﻿/// <reference path="routes.js" />
+/// <reference path="../Libs/_references.js" />
 // *** Ember Application
 window.App = Ember.Application.create({
     ready: function () { console.log("Hello World"); },
     
-    Router: DefaultRoute,
-
-    // *** Application
-    ApplicationView: ApplicationView,
-    
     ApplicationController: ApplicationController,
     
-    // *** Iteration
-    IterationView: IterationView,
-    
-    IterationController: IterationController,
-    
-    // *** Task
-    TaskView: TaskView,
-    
-    TaskController: TaskController
-});
+    ApplicationView: ApplicationView,
 
-App.initialize();
+    IterationsController: Ember.ArrayController.extend(),
+    
+    IterationsView: IterationsView,
+
+    Router: DefaultRoute
+});
+    
+window.App.initialize();
 

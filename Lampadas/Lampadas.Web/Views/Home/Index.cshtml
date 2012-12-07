@@ -1,10 +1,22 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<script type="text/x-handlebars" data-template-name="application">
+<script type="text/x-handlebars" data-template-name="application">  
     <div class="main-container">        
         {{outlet}}
     </div>
+
+</script>
+<!-- Iterations List -->
+<script type="text/x-handlebars" data-template-name="iterationList">
+    <h1>ITERATIONS</h1>
+    <ul class="item-list">
+    {{#each iteration in controller}}
+        {{#with iteration}}            
+            <li><a {{action showIteration this href=true}}>{{Title}}</a></li>
+        {{/with}}
+    {{/each}}
+    </ul>
 </script>
 <!-- Iteration -->
 <script type="text/x-handlebars" data-template-name="iteration">
@@ -43,6 +55,8 @@
 </script>
 <!-- Task -->
 <script type="text/x-handlebars" data-template-name="task">
-    <h1>{{Title}}</h1>
+    <div class="header-box">
+        <h1>{{Title}}</h1>
+    </div>
     
 </script>    

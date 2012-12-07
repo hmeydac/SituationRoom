@@ -43,6 +43,7 @@
             bundles.Add(new ScriptBundle("~/bundles/routes").Include(
                 "~/Scripts/application/task.routes.js",
                 "~/Scripts/application/iteration.routes.js",
+                "~/Scripts/application/iterations.routes.js",
                 "~/Scripts/application/application.routes.js"));
             bundles.Add(new ScriptBundle("~/bundles/application").Include("~/Scripts/application/application.js"));
         }

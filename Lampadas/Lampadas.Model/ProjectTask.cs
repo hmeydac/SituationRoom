@@ -7,7 +7,7 @@ namespace Lampadas.Model
         [Key]
         public int Id { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(250)]
         public string Title { get; set; }
 
         public string Description { get; set; }

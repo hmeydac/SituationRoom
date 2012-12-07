@@ -5,6 +5,8 @@
     color: rgb(162,182,194);
 }
 
+
+/* HEADINGS */
 h1 {
     margin: 0;
     margin-bottom: 5px;
@@ -17,6 +19,11 @@ h3 {
     margin-bottom: 5px;
     font-weight: 100;
     border-bottom: 1px solid rgb(162, 182, 194);
+}
+
+.header-box {
+    height: 125px;
+    text-transform: uppercase;
 }
 
 

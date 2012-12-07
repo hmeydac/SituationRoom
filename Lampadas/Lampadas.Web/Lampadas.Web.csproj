@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IterationController.cs" />
     <Compile Include="Controllers\TasksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -182,11 +183,13 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\Libs\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\application\iterations.routes.js" />
     <Content Include="Scripts\application\iteration.routes.js" />
     <Content Include="Scripts\application\application.routes.js" />
     <Content Include="Scripts\application\task.routes.js" />
     <Content Include="Scripts\Controllers\application.controller.js" />
     <Content Include="Scripts\Controllers\iteration.controller.js" />
+    <Content Include="Scripts\Controllers\iterations.controller.js" />
     <Content Include="Scripts\Controllers\task.controller.js" />
     <Content Include="Scripts\Libs\bootstrap.js" />
     <Content Include="Scripts\Libs\bootstrap.min.js" />
@@ -207,6 +210,7 @@
     <Content Include="Scripts\Libs\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\Libs\knockout-2.1.0.js" />
     <Content Include="Scripts\Libs\modernizr-2.5.3.js" />
+    <Content Include="Scripts\Models\iteration.model.js" />
     <Content Include="Scripts\Models\task.model.js" />
     <Content Include="Scripts\Views\application.view.js" />
     <Content Include="Scripts\Views\iteration.view.js" />
@@ -240,6 +244,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Scripts\Views\iterations.view.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

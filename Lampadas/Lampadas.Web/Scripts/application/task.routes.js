@@ -1,18 +1,19 @@
 ﻿/// <reference path="../Libs/_references.js" />
 TaskRoute = Ember.Route.extend({
-    route: '/task/:id',
+    route: '/task/:Id',
 
     enter: function(router) {
         console.log("The task sub-state was entered.");
     },
 
     deserialize: function(router, context) {
-        return null;
+        return window.App.Router.get('taskController') .find(context.Id);
     },
 
     serialize: function(router, context) {
         return {
-            id: context.Id
+            Id: context.Id,
+            Title: context.Title
         };
     },
 
