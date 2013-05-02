@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<ul class="main-menu">
+    <li>
+        <div id="aboutUs" class="title">About Us</div>
+        <div id="aboutUsContent" class="content ">
+            <div class="tile-section">
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Southworks</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Our People</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Our Customers</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Our Process</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div id="projects" class="title">Projects Portfolio</div>
+        <div id="projectsContent" class="content collapsed">
+            <div class="tile-section">
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Keynotes</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Custom Development</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Training Kits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div id="technologies" class="title">Technologies</div>
+        <div id="technologiesContent" class="content collapsed">
+            <div class="tile-section">
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Languages</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Frameworks</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+       <li>
+        <div id="work" class="title">Work for Us</div>
+        <div id="workContent" class="content collapsed">
+            <div class="tile-section">
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Technical Writers</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Engineers</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Testers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+       <li>
+        <div id="contact" class="title">Contact Us</div>
+        <div id="contactContent" class="content collapsed">
+            <div class="tile-section">
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Email</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Tweeter</p>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-description">
+                        <p>Facebook</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#aboutUs").click(function () {
+                $(".content").addClass("collapsed");
+                $("#aboutUsContent").removeClass("collapsed");
+                $("#aboutUsContent").addClass("expanded");
+            });
+
+            $("#projects").click(function () {
+                $(".content").addClass("collapsed");
+                $("#projectsContent").removeClass("collapsed");
+            });
+            $("#work").click(function () {
+                $(".content").addClass("collapsed");
+                $("#workContent").removeClass("collapsed");
+            });
+            $("#technologies").click(function () {
+                $(".content").addClass("collapsed");
+                $("#technologiesContent").removeClass("collapsed");
+            });
+            $("#contact").click(function () {
+                $(".content").addClass("collapsed");
+                $("#contactContent").removeClass("collapsed");
+            });
+        });
+    </script>
+}

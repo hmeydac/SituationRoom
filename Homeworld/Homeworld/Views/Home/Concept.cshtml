@@ -1,0 +1,28 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+}
+<div class="concept-brand">
+    <h1>SOUTHWORKS</h1>
+    <h3>Corporate Extranet</h3>
+</div>
+
+<div class="main-menu">
+    <div id="aboutUsButton" class="menu-option">About Us</div>
+    <div class="menu-option">Our Projects</div>
+    <div class="menu-option">Our Technologies</div>
+    <div class="menu-option">Work For Us</div>
+    <div class="menu-option">Contact Us</div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function() {
+            // Hook events
+            $("#aboutUsButton").click(function() {
+                
+            });
+        });
+    </script>
+}
