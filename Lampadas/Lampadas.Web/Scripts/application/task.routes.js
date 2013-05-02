@@ -6,16 +6,16 @@ TaskRoute = Ember.Route.extend({
         console.log("The task sub-state was entered.");
     },
 
-    deserialize: function(router, context) {
-        return window.App.Router.get('taskController') .find(context.Id);
-    },
+        deserialize: function(router, context) {
+            return window.App.Router.get('taskController') .find(context.Id);
+        },
 
-    serialize: function(router, context) {
-        return {
-            Id: context.Id,
-            Title: context.Title
-        };
-    },
+        serialize: function(router, context) {
+            return {
+                Id: context.Id,
+                Title: context.Title
+            };
+        },
 
     connectOutlets: function(router, aTask) {
         router.get('applicationController').connectOutlet('task', aTask);
